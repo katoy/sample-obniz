@@ -1,0 +1,159 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="obniz" id="X2:3=S(hsdv0mk{aavHW">obniz</variable>
+    <variable type="led" id="c:cZJd0#1u}/L@gBfqk5">led</variable>
+  </variables>
+  <block type="obniz_connect" id="AZ9_9m@j-L}T/;tw1{jz" x="45" y="-135">
+    <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+    <value name="obniz_id">
+      <shadow type="text" id="I@ENEdUNxLEpjL|r;f`;">
+        <field name="TEXT">OBNIZ_ID_HERE</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="obniz_util_repeat" id="5{GW`STolu6}U0sF(+Ej">
+        <statement name="DO">
+          <block type="obniz_display_clear" id="5=nf9pG=#v7FsnLr5l~W">
+            <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+            <next>
+              <block type="obniz_display_print" id="~M/2tCBt`Cm5`.y-)F$9">
+                <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                <value name="print_text">
+                  <shadow type="text" id=".a(7A(bt}^LG}Pg*$Iwk">
+                    <field name="TEXT">Hello, World!</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="obniz_util_wait" id="Q(.xQ;Z`m0;a$Q,Uv.Gy">
+                    <value name="time">
+                      <shadow type="math_number" id="@H.[#I+`Iz8:w6P]Gl3!">
+                        <field name="NUM">2000</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="z@2aCtE2aTzaUW5mPmCv">
+                        <value name="IF0">
+                          <shadow type="logic_boolean" id="@w|emT6eWf~lIJ7vN7Jo">
+                            <field name="BOOL">TRUE</field>
+                          </shadow>
+                          <block type="obniz_ai_weather" id="+a#E/~m_6WvFoBIl!Q{6">
+                            <field name="weather">snow</field>
+                            <value name="locale">
+                              <shadow type="text" id="|`|,@a8~NA{Q-3cS|_si">
+                                <field name="TEXT">tokyo</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="obniz_display_print" id="j`nq##a|VjC@TBt2DrRT">
+                            <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                            <value name="print_text">
+                              <shadow type="text" id="I{K:K5dM!Bx-_8zYj70N">
+                                <field name="TEXT">雪</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="pK*9gE$ejZ}0siAS:,Tl">
+                            <value name="IF0">
+                              <shadow type="logic_boolean" id="@w|emT6eWf~lIJ7vN7Jo">
+                                <field name="BOOL">TRUE</field>
+                              </shadow>
+                              <block type="obniz_ai_weather" id="%iw#biPgVtn8ShYG|MXZ">
+                                <field name="weather">sunny</field>
+                                <value name="locale">
+                                  <shadow type="text" id="sWLCg=W[tqAx)w~)/lLp">
+                                    <field name="TEXT">tokyo</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="obniz_display_print" id="8iF^jInBnU^6N@-L8z2O">
+                                <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                                <value name="print_text">
+                                  <shadow type="text" id="ja1A,E]B%jsIW,fS:%ZE">
+                                    <field name="TEXT">晴れ</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="`a(R=(j9}j1@XFt],8`2">
+                                <value name="IF0">
+                                  <shadow type="logic_boolean" id="@w|emT6eWf~lIJ7vN7Jo">
+                                    <field name="BOOL">TRUE</field>
+                                  </shadow>
+                                  <block type="obniz_ai_weather" id="GALz%@9|WbYctP=W}p7=">
+                                    <field name="weather">cloudy</field>
+                                    <value name="locale">
+                                      <shadow type="text" id="Sv?XA4}Gc_P^:}FPUM%Y">
+                                        <field name="TEXT">tokyo</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="obniz_display_print" id="~.ml}.43pMa[+;HYDzl^">
+                                    <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                                    <value name="print_text">
+                                      <shadow type="text" id="t!*)c=IifnC[C#*~^}4X">
+                                        <field name="TEXT">曇り</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="controls_if" id="(5!8uI1T)s|,Pv^^kikZ">
+                                    <value name="IF0">
+                                      <shadow type="logic_boolean" id="@w|emT6eWf~lIJ7vN7Jo">
+                                        <field name="BOOL">TRUE</field>
+                                      </shadow>
+                                      <block type="obniz_ai_weather" id="CiP$Afi0$D4/dPem.R#Z">
+                                        <field name="weather">rain</field>
+                                        <value name="locale">
+                                          <shadow type="text" id="qHm7%h]!7?M8?puOFGq0">
+                                            <field name="TEXT">tokyo</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="obniz_display_print" id="(Z#lyqAa+yBl!iJt0PYY">
+                                        <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                                        <value name="print_text">
+                                          <shadow type="text" id="^{!:42=FWObW2cY7L7lv">
+                                            <field name="TEXT">雨</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="obniz_util_wait" id="i??@lIFjH6HwG01.c(Xr">
+                                        <value name="time">
+                                          <shadow type="math_number" id="bKv}yM@V5bDb[c:zSnaG">
+                                            <field name="NUM">2000</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>
