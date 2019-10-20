@@ -1,0 +1,101 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable type="obniz" id="X2:3=S(hsdv0mk{aavHW">obniz</variable>
+    <variable type="UIButton" id="`g#~H#WqE_B:DH(f*`IY">オン</variable>
+    <variable type="UIButton" id="%OF]RYl~NfC%,0_kkr!j">オフ</variable>
+    <variable type="led" id="Q*vR?uy-cR|7IJm|?3j!">led</variable>
+  </variables>
+  <block type="obniz_connect" id="AZ9_9m@j-L}T/;tw1{jz" x="117" y="129">
+    <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+    <value name="obniz_id">
+      <shadow type="text" id="I@ENEdUNxLEpjL|r;f`;">
+        <field name="TEXT">OBNIZ_ID_HERE"</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="obniz_display_print" id="~M/2tCBt`Cm5`.y-)F$9">
+        <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+        <value name="print_text">
+          <shadow type="text" id=".a(7A(bt}^LG}Pg*$Iwk">
+            <field name="TEXT">Hello, World!</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="obniz_ui_button" id="r[*`ECWZuQRiYiCI$$:h">
+            <field name="button" id="`g#~H#WqE_B:DH(f*`IY" variabletype="UIButton">オン</field>
+            <value name="text">
+              <shadow type="text" id="*o}N.ZAa4:2s}:~/UEa~">
+                <field name="TEXT">on</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="obniz_ui_button" id="*f;%%m!=6!]FpX@Uz[4^">
+                <field name="button" id="%OF]RYl~NfC%,0_kkr!j" variabletype="UIButton">オフ</field>
+                <value name="text">
+                  <shadow type="text" id="4tOl3HO.0]wE,x+jz3o4">
+                    <field name="TEXT">off</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="obniz_parts_led_wired" id="pIX${)[[[V5r1z}bun$Y">
+                    <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                    <field name="LED" id="Q*vR?uy-cR|7IJm|?3j!" variabletype="led">led</field>
+                    <value name="anode">
+                      <shadow type="math_number" id="/=C@y0N~14fI:YiB3Tzj">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <value name="cathode">
+                      <shadow type="math_number" id="UZZ)4Brt#j#a3wbT=[`m">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="obniz_util_repeat" id="0^,POls|Tg9x2/FO}B3g">
+                        <statement name="DO">
+                          <block type="controls_if" id="VQaH`MIo%{[Ok[)d5n{:">
+                            <mutation xmlns="http://www.w3.org/1999/xhtml" else="1"></mutation>
+                            <value name="IF0">
+                              <shadow type="logic_boolean" id="e%(gv)ZL33;04il|#aI%">
+                                <field name="BOOL">TRUE</field>
+                              </shadow>
+                              <block type="obniz_ui_button_click" id="YfVldrQGM13S{gwR~?El">
+                                <field name="button" id="%OF]RYl~NfC%,0_kkr!j" variabletype="UIButton">オフ</field>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="obniz_parts_led_off" id="^7fSPt4@ZC;,he`]D.-y">
+                                <field name="LED" id="Q*vR?uy-cR|7IJm|?3j!" variabletype="led">led</field>
+                              </block>
+                            </statement>
+                            <statement name="ELSE">
+                              <block type="controls_if" id="H,7};KA$Ud;S8.$4S}M*">
+                                <value name="IF0">
+                                  <shadow type="logic_boolean" id="$Ku`2Yly2XL6yG,dX/wP">
+                                    <field name="BOOL">TRUE</field>
+                                  </shadow>
+                                  <block type="obniz_ui_button_click" id="^cFIg1CYkb1|hyw3,0kZ">
+                                    <field name="button" id="`g#~H#WqE_B:DH(f*`IY" variabletype="UIButton">オン</field>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="obniz_parts_led_on" id="xbui3mBmT^TnHX#/I,UQ">
+                                    <field name="LED" id="Q*vR?uy-cR|7IJm|?3j!" variabletype="led">led</field>
+                                  </block>
+                                </statement>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

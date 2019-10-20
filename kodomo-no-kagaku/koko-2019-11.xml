@@ -1,0 +1,99 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable type="obniz" id="X2:3=S(hsdv0mk{aavHW">obniz</variable>
+  </variables>
+  <block type="obniz_connect" id="AZ9_9m@j-L}T/;tw1{jz" x="117" y="129">
+    <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+    <value name="obniz_id">
+      <shadow type="text" id="I@ENEdUNxLEpjL|r;f`;">
+        <field name="TEXT">OBNIZ_ID_HERE"</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="obniz_ai_camera_start" id="z{Lwxv5ZbfZI8HBS08q;">
+        <next>
+          <block type="obniz_display_print" id="G`N}{|Kdz{6;H*TfH5ZX">
+            <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+            <value name="print_text">
+              <shadow type="text" id="G^w?@J$^;ME6OOA24eRd">
+                <field name="TEXT">Hello, World!</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="obniz_util_repeat" id="gv-F:np*=i.jz*:J[7t9">
+                <statement name="DO">
+                  <block type="obniz_util_wait" id="T},eEBXD_4w!YAWt*H!:">
+                    <value name="time">
+                      <shadow type="math_number" id="+q{Zlyd{._)bwXSb^Zb6">
+                        <field name="NUM">500</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="obniz_util_repeat_while" id="HeWi+l]$Y!ux:T;bYmqo">
+                        <value name="BOOL">
+                          <block type="obniz_ai_face" id="@)T/H_snk?`rTQ!YcSTk"/>
+                        </value>
+                        <statement name="DO">
+                          <block type="obniz_display_print" id="~M/2tCBt`Cm5`.y-)F$9">
+                            <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                            <value name="print_text">
+                              <shadow type="text" id=".a(7A(bt}^LG}Pg*$Iwk">
+                                <field name="TEXT">ただいま！</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="obniz_util_wait" id="k,!uM:]GgUM47whG`Otk">
+                                <value name="time">
+                                  <shadow type="math_number" id="3UmcG`X6]z(b`v?,gC93">
+                                    <field name="NUM">500</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="obniz_display_clear" id="iA+8DAC]/Y#}[%goub2l">
+                                    <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="m0]5Yj5+EAIBOC|,=1_l">
+                            <value name="IF0">
+                              <shadow type="logic_boolean" id="+!}vR/.{.[=QTiC-P5vl">
+                                <field name="BOOL">TRUE</field>
+                              </shadow>
+                              <block type="obniz_switch" id="Sthl`!N;zxk*#Md0KK^c">
+                                <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                                <field name="state">push</field>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="obniz_display_clear" id="0Y8OVi3O-xMh2_/v-^G$">
+                                <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                                <next>
+                                  <block type="obniz_display_print" id="OD?U/Y%tzz$HZ%,+,mQ3">
+                                    <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                                    <value name="print_text">
+                                      <shadow type="text" id="T~VoMffARDu5FmdxGx3I">
+                                        <field name="TEXT">Hello, World!</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
