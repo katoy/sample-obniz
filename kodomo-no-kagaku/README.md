@@ -8,9 +8,12 @@ http://prog.kodomonokagaku.com/obniz/
 プログラム実行ときに、ozniz id を聞かれます。
 
 - koko-2019-11
+ 距離センサーで一定距離以下になると、接近中と表示する。
+
+- koko-2019-11
  カメラに顔が写っていると ”ただいま!"と表示する。obniz のボタンクリックすると "hello world" と表示する。
 
 - sample-led
- "hello world" の表示と LED (01/01 に 青色LEDを接続して web 画面の on/off で点灯させる例
+ "hello world" の表示と LED (01/01 に 青色LEDを接続して web 画面の on/off で点灯させる例)
 
  

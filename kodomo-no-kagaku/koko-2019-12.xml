@@ -1,0 +1,171 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable type="obniz" id="X2:3=S(hsdv0mk{aavHW">obniz</variable>
+    <variable type="gp2y0a21yk0f" id="hCq6S}aC?GQ.d$|0%+~L">gp2y0a21yk0f</variable>
+    <variable type="UILabel" id="dE.*,K]36T)N7M}p),pQ">label_0</variable>
+    <variable type="UILabel" id="}zO|aKkWHZ38jq1Bi4n+">label_1</variable>
+    <variable type="UIImage" id="(im6Ve`{]vACvltMd6g|">image</variable>
+  </variables>
+  <comment id="$v+,Aly9|W(J*}.v^7@R" x="596" y="204" h="173.62777709960938" w="525.5206298828125">子供の科学 2019-12月号のプログラムをベースにしている。
+https://www.youtube.com/watch?time_continue=16&amp;v=fA7KkCsT9ns&amp;feature=emb_logo
+  </comment>
+  <block type="obniz_connect" id="AZ9_9m@j-L}T/;tw1{jz" x="117" y="129">
+    <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+    <value name="obniz_id">
+      <shadow type="text" id="I@ENEdUNxLEpjL|r;f`;">
+        <field name="TEXT">OBNIZ_ID_HERE</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="obniz_parts_gp2y0a21yk0f_wired" id="/[@)NKGjth.!.u=LOC#3">
+        <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+        <field name="GP2Y0A21YK0F" id="hCq6S}aC?GQ.d$|0%+~L" variabletype="gp2y0a21yk0f">gp2y0a21yk0f</field>
+        <value name="vcc">
+          <shadow type="math_number" id="h76w5R#wrgp[OiucKZG(">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="gnd">
+          <shadow type="math_number" id="]~),.Y,xTIQoz]{QT/K+">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="signal">
+          <shadow type="math_number" id="DU/Ci/^(im)~xsEz{OiT">
+            <field name="NUM">2</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="obniz_ui_label_create" id=")xAhO)Aq]1}Gmnk*=f,B">
+            <field name="UILabel" id="dE.*,K]36T)N7M}p),pQ" variabletype="UILabel">label_0</field>
+            <next>
+              <block type="obniz_ui_label_create" id="P!}BCaBRxX{_T{[F74@W">
+                <field name="UILabel" id="}zO|aKkWHZ38jq1Bi4n+" variabletype="UILabel">label_1</field>
+                <next>
+                  <block type="obniz_ui_image" id="dt`Ju/fZfOQIisHXc%p,">
+                    <field name="UIImage" id="(im6Ve`{]vACvltMd6g|" variabletype="UIImage">image</field>
+                    <field name="url">/blockly/images/dog.png</field>
+                    <next>
+                      <block type="obniz_util_repeat" id="AbPqN(uW|L|}aA;cl1rk">
+                        <statement name="DO">
+                          <block type="obniz_wait" id="p0e]bRqWUWO,:,Kr+Kx8">
+                            <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                            <value name="time">
+                              <shadow type="math_number" id="6r~uCaXi`jrr5!)|8QrT">
+                                <field name="NUM">500</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="controls_if" id="o_Xc`aRwI-l*rMP9AiI,">
+                                <mutation xmlns="http://www.w3.org/1999/xhtml" else="1"></mutation>
+                                <value name="IF0">
+                                  <shadow type="logic_boolean" id="x.OR3wj=-!q+8GNb3Kmd">
+                                    <field name="BOOL">TRUE</field>
+                                  </shadow>
+                                  <block type="logic_compare" id="@}of/mL-4N:`LF82drjO">
+                                    <field name="OP">LT</field>
+                                    <value name="A">
+                                      <shadow type="math_number">
+                                        <field name="NUM">10</field>
+                                      </shadow>
+                                      <block type="obniz_parts_gp2y0a21yk0f_distance" id="O?awqX+-!)H}sH#:ONpA">
+                                        <field name="GP2Y0A21YK0F" id="hCq6S}aC?GQ.d$|0%+~L" variabletype="gp2y0a21yk0f">gp2y0a21yk0f</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <shadow type="math_number" id="e=Q$+zS`w=e3U1^$,IE7">
+                                        <field name="NUM">500</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="obniz_display_print" id="f;|18o?2lvmNH.{B?:k`">
+                                    <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                                    <value name="print_text">
+                                      <shadow type="text" id="OIH*UHJ$*L%LAVDwc$G@">
+                                        <field name="TEXT">誰かが接近中</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="obniz_display_print" id="t_l%Lg.jQ=+Z==%GjBRC">
+                                        <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                                        <value name="print_text">
+                                          <shadow type="text" id="rwGIv#xi.9`6K-Swq(^p">
+                                            <field name="TEXT">誰かが接近中</field>
+                                          </shadow>
+                                          <block type="obniz_parts_gp2y0a21yk0f_distance" id="pFuDCjCJ#o*Sxc[Rttt,">
+                                            <field name="GP2Y0A21YK0F" id="hCq6S}aC?GQ.d$|0%+~L" variabletype="gp2y0a21yk0f">gp2y0a21yk0f</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="obniz_ui_label_settext" id="}:$dW[U_/#f5b8/y@#M1">
+                                            <field name="UILabel" id="dE.*,K]36T)N7M}p),pQ" variabletype="UILabel">label_0</field>
+                                            <value name="text">
+                                              <shadow type="text" id="GEx81/45nanMSAwEXb{@">
+                                                <field name="TEXT">誰かが接近中</field>
+                                              </shadow>
+                                            </value>
+                                            <next>
+                                              <block type="obniz_ui_label_settext" id="7/j4x{_b/kKWU{oIlGld">
+                                                <field name="UILabel" id="}zO|aKkWHZ38jq1Bi4n+" variabletype="UILabel">label_1</field>
+                                                <value name="text">
+                                                  <shadow type="text" id="a)gqWT(b|ZOf/~k.R-`a">
+                                                    <field name="TEXT">text</field>
+                                                  </shadow>
+                                                  <block type="obniz_parts_gp2y0a21yk0f_distance" id="1]rw9_19W{SsKILEV]%j">
+                                                    <field name="GP2Y0A21YK0F" id="hCq6S}aC?GQ.d$|0%+~L" variabletype="gp2y0a21yk0f">gp2y0a21yk0f</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <statement name="ELSE">
+                                  <block type="obniz_display_clear" id="u|Y8LV^s,ct067:agi/6">
+                                    <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+                                    <next>
+                                      <block type="obniz_ui_label_settext" id="e;3AzMLd-;6_rbGuk|p:">
+                                        <field name="UILabel" id="dE.*,K]36T)N7M}p),pQ" variabletype="UILabel">label_0</field>
+                                        <value name="text">
+                                          <shadow type="text" id="bYzWP%bR1n(nNNc5wO}m">
+                                            <field name="TEXT"/>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="obniz_ui_label_settext" id="Vn?8Hka/}9;I5p/I4eH%">
+                                            <field name="UILabel" id="}zO|aKkWHZ38jq1Bi4n+" variabletype="UILabel">label_1</field>
+                                            <value name="text">
+                                              <shadow type="text">
+                                                <field name="TEXT">text</field>
+                                              </shadow>
+                                              <block type="obniz_parts_gp2y0a21yk0f_distance" id="F~e;c,i-Tk:ihm[[ILGJ">
+                                                <field name="GP2Y0A21YK0F" id="hCq6S}aC?GQ.d$|0%+~L" variabletype="gp2y0a21yk0f">gp2y0a21yk0f</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
