@@ -1,13 +1,17 @@
+# 子供の科学 の obnize の記事
 
 月刊誌 "子供の科学" の obniz 連載にコードを試していきます。
 http://prog.kodomonokagaku.com/obniz/
-
 
 - tips
 公開するプログラムでは, obniz id 記載している部分を "OBNIZ_ID_HERE" しておくとよいです。
 プログラム実行ときに、ozniz id を聞かれます。
 
-- koko-2019-11
+- koko-2020-04
+  カメラに顔がうつると、東京の天気を LED の色と音声で知らせるように変更をした。
+  https://obniz.io/ja/console/blockprogram?obniz_id=0748-0674
+
+- koko-2019-12
  距離センサーで一定距離以下になると、接近中と表示する。  
  https://obniz.io/console/blockprogram/run?root=/users/2151/repo&filename=koko-2019-12.xml
   
@@ -15,7 +19,5 @@ http://prog.kodomonokagaku.com/obniz/
  カメラに顔が写っていると ”ただいま!"と表示する。obniz のボタンクリックすると "hello world" と表示する。
  https://obniz.io/console/blockprogram/run?root=/users/2151/repo&filename=koko-2019-11.xml&https=true&aicam=true
   
-
 - sample-led
  "hello world" の表示と LED (01/01 に 青色LEDを接続して web 画面の on/off で点灯させる例)  
-

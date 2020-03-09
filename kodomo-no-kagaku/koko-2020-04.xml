@@ -1,0 +1,298 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable type="obniz" id="X2:3=S(hsdv0mk{aavHW">obniz</variable>
+    <variable type="ws2811" id="w#4+V18]w[C/Pbqo7zGY">ws2811</variable>
+  </variables>
+  <block type="obniz_connect" id="AZ9_9m@j-L}T/;tw1{jz" x="-63" y="-117">
+    <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+    <comment id="undefined" pinned="true" h="89.79122924804688" w="579.0253601074219">子供の科学 2020-4月号のプログラムをベースにしている。
+https://www.youtube.com/watch?v=lt0PjrCk8SE
+    </comment>
+    <value name="obniz_id">
+      <shadow type="text" id="I@ENEdUNxLEpjL|r;f`;">
+        <field name="TEXT">OBNIZ_ID_HERE</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="obniz_ai_camera_start" id="M9RHrQ1hp=vUDX^kz{aY">
+        <next>
+          <block type="obniz_parts_ws2811_wired" id="wetR#ATP;et.G]ZtkDw6">
+            <field name="obniz" id="X2:3=S(hsdv0mk{aavHW" variabletype="obniz">obniz</field>
+            <field name="WS2811" id="w#4+V18]w[C/Pbqo7zGY" variabletype="ws2811">ws2811</field>
+            <value name="din">
+              <shadow type="math_number" id="gAyeAKd9gktY`#Iq)a(r">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <value name="vcc">
+              <shadow type="math_number" id="ag-wm,S5p]sye{[r6Z},">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <value name="gnd">
+              <shadow type="math_number" id="DlUGQ$,qV=[Z4+e}~-R1">
+                <field name="NUM">2</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="obniz_parts_ws2811_rgb" id="*FQT]_nX-5RFiG002AMq">
+                <field name="WS2811" id="w#4+V18]w[C/Pbqo7zGY" variabletype="ws2811">ws2811</field>
+                <value name="red">
+                  <shadow type="math_number" id="1cQw@:g/[2pxXu6.di#j">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="green">
+                  <shadow type="math_number" id="9Kkr/_o!z|oY(;mBvZx7">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="blue">
+                  <shadow type="math_number" id="ErNh{YpNoKzF?yeDQ(nh">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="obniz_util_repeat" id="T/6=5vs~K[6Dx+?WSzkA">
+                    <statement name="DO">
+                      <block type="controls_if" id="1~W0W]S.1QqCv~!(9ls]">
+                        <value name="IF0">
+                          <shadow type="logic_boolean" id="tz5`CSLnw!7Xe!p%y|-Y">
+                            <field name="BOOL">TRUE</field>
+                          </shadow>
+                          <block type="obniz_ai_face" id="Nw)4BWGuWR(zY}!3*_cH"/>
+                        </value>
+                        <statement name="DO0">
+                          <block type="controls_if" id="=BO91V$igniT,GT@3+_3">
+                            <value name="IF0">
+                              <shadow type="logic_boolean" id=":69miwZD84l:Uh7PzxMH">
+                                <field name="BOOL">TRUE</field>
+                              </shadow>
+                              <block type="obniz_ai_weather" id="Y+F~gVy?)AWc4~T}j^jO">
+                                <field name="weather">sunny</field>
+                                <value name="locale">
+                                  <shadow type="text" id="SyR0Mm!JCapC+z3{py,B">
+                                    <field name="TEXT">tokyo</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="obniz_parts_ws2811_rgb" id="en:?_-vG_tT@m4s22b$y">
+                                <field name="WS2811" id="w#4+V18]w[C/Pbqo7zGY" variabletype="ws2811">ws2811</field>
+                                <value name="red">
+                                  <shadow type="math_number" id="]JD-auSJAoSiyX9y5QO*">
+                                    <field name="NUM">255</field>
+                                  </shadow>
+                                </value>
+                                <value name="green">
+                                  <shadow type="math_number" id="(0C=9REiR{jOi_$yn!Fc">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                </value>
+                                <value name="blue">
+                                  <shadow type="math_number" id="4q9dQW[#C!q]g?^HbM:F">
+                                    <field name="NUM">255</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="obniz_ai_say" id="4Koid9H!c3$Ba#7_;sE%">
+                                    <value name="text">
+                                      <shadow type="text" id="V|`y~E6/cyQzH+E4A+nv">
+                                        <field name="TEXT">はれ</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="10n`slS;?9gh%NB/Fy~p">
+                                <value name="IF0">
+                                  <shadow type="logic_boolean" id="2:w!4=|Y0EFcZ+s.[U#J">
+                                    <field name="BOOL">TRUE</field>
+                                  </shadow>
+                                  <block type="obniz_ai_weather" id="E$9!T!KX0LUL9rT-Msf9">
+                                    <field name="weather">cloudy</field>
+                                    <value name="locale">
+                                      <shadow type="text" id="*%W0^EY/~e4/]DJH}B@F">
+                                        <field name="TEXT">tokyo</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="obniz_ai_say" id="na:7K/;nMG24Pye^~mG:">
+                                    <value name="text">
+                                      <shadow type="text" id="V!y/6.YQ+u-@GBPxFU(X">
+                                        <field name="TEXT">くもり</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="obniz_parts_ws2811_rgb" id="caDz5~R0:exhFn]#=V#(">
+                                        <field name="WS2811" id="w#4+V18]w[C/Pbqo7zGY" variabletype="ws2811">ws2811</field>
+                                        <value name="red">
+                                          <shadow type="math_number" id="_Py2FQY.|*Z=JP}i?*,0">
+                                            <field name="NUM">255</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="green">
+                                          <shadow type="math_number" id="PM(1}^P8Uj19Q)@;*G##">
+                                            <field name="NUM">0</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="blue">
+                                          <shadow type="math_number" id="qa:{dwSFu@DY5^.I.DbN">
+                                            <field name="NUM">0</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="controls_if" id="%*sML4[C-W{L=Qz5FZZ-">
+                                    <value name="IF0">
+                                      <shadow type="logic_boolean" id="TZiDvo{}LB[bR;.Z94Gr">
+                                        <field name="BOOL">TRUE</field>
+                                      </shadow>
+                                      <block type="obniz_ai_weather" id="L=;LZB=m!hV@*:FEpc11">
+                                        <field name="weather">rain</field>
+                                        <value name="locale">
+                                          <shadow type="text" id="f1m]khA!tIk#^1e2WvU|">
+                                            <field name="TEXT">tokyo</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="obniz_parts_ws2811_hsv" id="~#1y4B6_t;AkL=im8,[1">
+                                        <field name="WS2811" id="w#4+V18]w[C/Pbqo7zGY" variabletype="ws2811">ws2811</field>
+                                        <value name="hue">
+                                          <shadow type="math_number" id="Pr:./5pPuWj-[mcbT=1t">
+                                            <field name="NUM">128</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="saturation">
+                                          <shadow type="math_number" id="bM+f%In)Ad33Y%W+wQyw">
+                                            <field name="NUM">255</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="value">
+                                          <shadow type="math_number" id="$$jY~DUKMF}0C-gi$~xH">
+                                            <field name="NUM">0</field>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="obniz_ai_say" id="TW#sz6pZXAmn^/RU;s_l">
+                                            <value name="text">
+                                              <shadow type="text" id="x0i:0PbgDiy}/J?pK-`K">
+                                                <field name="TEXT">あめ</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="controls_if" id="Z^)b#|#{fk(bJZxORcJ.">
+                                        <value name="IF0">
+                                          <shadow type="logic_boolean" id=".va6~9/(g^xp|3zH~9E?">
+                                            <field name="BOOL">TRUE</field>
+                                          </shadow>
+                                          <block type="obniz_ai_weather" id="F+xJVVS?|7G*OwBXqU6n">
+                                            <field name="weather">snow</field>
+                                            <value name="locale">
+                                              <shadow type="text" id="#o#N3}m@zzcL[9U9S`{r">
+                                                <field name="TEXT">tokyo</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="obniz_parts_ws2811_rgb" id="Ww4jpj3!lXG?yA)/c!C:">
+                                            <field name="WS2811" id="w#4+V18]w[C/Pbqo7zGY" variabletype="ws2811">ws2811</field>
+                                            <value name="red">
+                                              <shadow type="math_number" id=",)FkYR/0D7`v!Kk7UJmi">
+                                                <field name="NUM">255</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="green">
+                                              <shadow type="math_number" id="UlVXKXv9*Z1~^$2946$Z">
+                                                <field name="NUM">255</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="blue">
+                                              <shadow type="math_number" id="u9GhsKoH9VUEN2|xr$(2">
+                                                <field name="NUM">255</field>
+                                              </shadow>
+                                            </value>
+                                            <next>
+                                              <block type="obniz_ai_say" id="s/.D0pk7|Cq/cZ5~wR,v">
+                                                <value name="text">
+                                                  <shadow type="text" id="AR$N12}rZ5^3:#adv]UW">
+                                                    <field name="TEXT">ゆき</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="obniz_util_wait" id="rQ.}PGYkVoUbg(o(p*CF">
+                            <value name="time">
+                              <shadow type="math_number" id="xPUwXQ8!MI84UOZNGiA=">
+                                <field name="NUM">500</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="obniz_parts_ws2811_rgb" id="87P|rtzGyKhv=ZjhjWxN">
+                                <field name="WS2811" id="w#4+V18]w[C/Pbqo7zGY" variabletype="ws2811">ws2811</field>
+                                <value name="red">
+                                  <shadow type="math_number" id="C:};ZCfgM%4X*iD8w9|6">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                </value>
+                                <value name="green">
+                                  <shadow type="math_number" id="DbRH`aCaCud{~gq@H0xZ">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                </value>
+                                <value name="blue">
+                                  <shadow type="math_number" id=",!4X0@?.?R|WPahTpqWu">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="obniz_util_wait" id="(E3/d#Yo:3EpI4xqxAn_">
+                                    <value name="time">
+                                      <shadow type="math_number" id="/tdgYs7]MBv*,}^)3=RQ">
+                                        <field name="NUM">500</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
